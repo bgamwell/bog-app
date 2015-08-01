@@ -17,7 +17,6 @@
         <tr>
           <th>Name</th>
           <th>Description</th>
-          <th>Delete</th>
         </tr>
       </thead>
       <tbody>
@@ -29,7 +28,8 @@
         <tr>
           <td><%= link_to creature.name, "/creatures/#{creature.id}"  %></td>
           <td><%= creature.description %></td>
-          <td><%= button_to "Delete", creature, method: :delete %><td>
+          <td><a href="<%= "/creatures/#{creature.id}/edit" %>"><button class="btn btn-default">Edit</button></td>
+          <td><a href="<%= "/creatures/#{creature.id}" %>" data-method='delete'><button class="btn btn-default">Delete</button><td>
         </tr>
 
         <% end %>
