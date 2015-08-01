@@ -1,0 +1,29 @@
+<%= render "menu" %>
+
+<div class="container">
+  <div class="col-md-6 col-md-offset-6">
+    <h1>Here is your PURE EVIL creature!</h1>
+    <p>And yes, it is pure EVIL</p>
+  </div>
+  <br />
+  <div class="col-md-6 col-md-offset-3">
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><%= @creature.name %></td>
+          <td><%= @creature.description %></td>
+          <td><%= button_to "Delete", @creature, method: :delete %><td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+</div><!-- close .container -->

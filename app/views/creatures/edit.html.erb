@@ -1,0 +1,25 @@
+<%= render "menu" %>
+
+<div class="container">
+  <div class="col-md-6 col-md-offset-3">
+
+    <h1>Create a new EVIL creature!</h1>
+    <p>Proceed at your own risk</p>
+
+  </div> <!-- close .col-md-6 -->
+
+  <div class="col-md-6 col-md-offset-3">
+    <div class="form-group">
+
+      <%= form_for @creature do |f| %>
+
+        <%= f.text_field :name %>
+        <%= f.text_area :description %>
+        <%= f.submit "Update Creature" %>
+
+      <% end %>
+
+    </div>
+  </div>
+
+</div> <!-- close .container -->
