@@ -11,11 +11,24 @@
   <div class="col-md-6 col-md-offset-3">
     <div class="form-group">
 
-      <%= form_for @creature do |f| %>
+      <%= form_for @creature, :html => {:class => "form-horizontal-center"} do |f| %>
+        <div class="form-group">
+          <%= f.label :name, "Name", class: "col-md-4 control-label" %>
+            <div class="col-md-8">
+              <%= f.text_field :name, class: "form-control" %>
+            </div>
+        </div>
+        <br />
+        <br />
+        <br />
+        <div class="form group">
+          <%= f.label :description, "Description", class: "col-md-4 control-label" %>
+            <div class="col-md-8">
+              <%= f.text_area :description, class: "form-control" %>
+            </div>
+        </div>
 
-        <%= f.text_field :name %>
-        <%= f.text_area :description %>
-        <%= f.submit "Update Creature" %>
+        <%= f.submit "Update Creature", class: "btn btn-default" %>
 
       <% end %>
 
